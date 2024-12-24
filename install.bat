@@ -31,9 +31,9 @@ if not defined CMAKE_GENERATOR_PLATFORM (
 )
 set GENERATOR_PLATFORM_ARG=-DCMAKE_GENERATOR_PLATFORM:STRING="%CMAKE_GENERATOR_PLATFORM%"
 if "%ARCH%" == "x64" (
-    set PREFIX=-DCMAKE_INSTALL_PREFIX="%PROGRAMFILES%\zlib"
+    set PREFIX=-DCMAKE_INSTALL_PREFIX="%cd%\external\zlib"
 ) else (
-    set PREFIX=-DCMAKE_INSTALL_PREFIX="%PROGRAMFILES(X86)%\zlib"
+    set PREFIX=-DCMAKE_INSTALL_PREFIX="%cd%\external\zlib"
 )
 
 echo|set /p="[1/6] Checking cmake... "
